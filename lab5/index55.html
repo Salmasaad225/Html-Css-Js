@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button onclick="date()"> click here  for date 1 </button>
+        <button onclick="new_w()"> click here  for new window 2 </button>
+        <button onclick="close_w()"> click here  for close window 2 </button>
+        <button onclick="reg()"> click here  3 </button>
+        <button onclick="input()"> click here 4 </button>
+        <button onclick="f_Name()"> click here 5 </button>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function date(){
+            var d = new Date();
+            alert(d);
+        }
+
+        ///////////////////////////////////////////////////////////////
+
+        var neww;
+
+        function new_w(){
+            setTimeout(w,3000);
+
+        
+        }
+
+        function w(){
+
+            neww=open("http://apps.iti.gov.eg/ManagementSystem/intlogin.aspx?returnURL=http://apps.iti.gov.eg/ManagementSystem/Schedule/StudentView.aspx")
+        }
+
+        function close_w(){
+            neww.close()
+
+
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+
+        function reg(){
+            var num =parseInt(prompt("please enter even number"));
+            var regex=/^[1-9]*[02468]$/
+            if(regex.test(num)==true){
+                var res ="true";
+                alert(res) ;
+            }
+            else{
+                var res="false";
+                alert (res);
+            }
+
+        }
+        ////////////////////////////////////////////////////////////////////////
+
+        function input(){
+           
+            var regex= /[a-z]+/i
+            do{
+                var name=prompt("please enter your name ")
+
+
+            }while(regex.test(name)==false)
+            alert (" your name is valid")
+
+            var r1=/^[0-9]{8}/
+            do{
+                var pnum=parseInt(prompt("please enter your phone number "));
+
+
+            }while(r1.test(pnum)==false)
+            alert (" your phone number is valid")
+
+
+            var r2=/^(01)(0|1|2|5)[0-9]{8}$/
+            do{
+                var mNum=prompt("please enter a mobile number");
+                console.log(r2.test(mNum))
+                
+            }while(r2.test(mNum)==false)
+                
+            alert("your mobile number is valid")
+             
+                 
+            var r3 =/^[a-z]+@[0-9]+(.com)$/i       
+           
+            do{
+                var email=prompt("please enter your email");
+                
+            }while(r3.test(email)==false)
+                
+            alert("your email is valid")
+
+            alert("your input is valid")
+
+            var coler=prompt("please enter color .. red , green , blue");
+            var r ="<pre style='color:red' > welcome dear gist "+name+"  <br> your telephone number is" +pnum+" <br> your mobile number is "+mNum+" <br> your email adress is "+email+"</pre>"
+            var g ="<pre style='color:green' > welcome dear gist "+name+"  <br> your telephone number is" +pnum+" <br> your mobile number is "+ mNum+ "<br> your email adress is "+email+"</pre>"
+            var b ="<pre style='color:blue' > welcome dear gist "+name+"  <br> your telephone number is" +pnum+" <br> your mobile number is" + mNum+" <br> your email adress is "+email+"</pre>"
+            var def ="<pre style='color:black' > welcome dear gist "+name+"  <br> your telephone number is" +pnum+" <br> your mobile number is "+ mNum+ " <br> your email adress is "+email+"/<pre>"
+            var d =new Date()
+            var d2=new Date(2020,8,3)
+           
+            
+
+
+
+            switch (coler){
+
+                case "red":
+                document.write(r);
+                document.write("<br><br><br><pre style='color:red'>today is"+d.getDate()+" <br> you are in month"+d.getMonth()+"<br> and year"+d.getFullYear()+"<br> today is"+d2+"</pre>")
+                break;
+
+                case "green":
+                document.write(g);
+                document.write("<br><br><br><pre style='color:green'>today is"+d.getDate()+" <br> you are in month"+d.getMonth()+"<br> and year"+d.getFullYear()+"<br> today is"+d2+"</pre>")
+                break;
+
+                case "blue":
+                document.write(b);
+                document.write("<br><br><br><pre style='color:blue'>today is"+d.getDate()+" <br> you are in month"+d.getMonth()+"<br> and year"+d.getFullYear()+"<br> today is"+d2+"</pre>")
+                break;
+                
+                default :
+                document.write("invalid color")
+                document.write(def);
+                document.write("<br><br><br><pre style='color:black'>today is"+d.getDate()+" <br> you are in month"+d.getMonth()+"<br> and year"+d.getFullYear()+"<br> today is"+d2+"</pre>")
+
+
+            }
+          
+
+        }
+
+        ///////////////////////////////////////////////////////////
+         var arr =[{name:"salma" , Degree:99},{name:"marwa" , Degree: 100},{name:"mohamed" , Degree:80},{name:"soha" , Degree:52 },{name:"Dina" , Degree:60} ]
+
+         function f_Name(){
+
+
+
+
+           
+            var found=arr.find(function(item){return item.Degree > 90 && item.Degree <100 });
+            alert("between 100 and 90 is "+found.name)
+
+            var found2=arr.filter(function(items){return items.Degree <= 60});
+
+            for(var i in found2){
+                 
+                    alert("less 60 is  "+found2[i].name);
+
+            
+                } 
+
+
+           
+           
+               arr.push({name:"ahmed" , Degree:86})
+
+               for(var i in arr){
+                
+                    alert(arr[i].name);
+                    alert(arr[i].Degree)
+                     
+                } 
+
+              arr.pop()
+
+               for(var i of arr){
+                 
+                   alert(i["name"]);
+                   alert(i["Degree"])
+
+    
+            }   } 
+
+
+
+         </script>
+            
+    </body>
+
+</html>

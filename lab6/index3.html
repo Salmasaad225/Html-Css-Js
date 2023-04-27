@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <script>
+
+
+            function wee(){
+                var arr=[];
+                 var str=" hi there ... how are you!!"
+                  arr =str.split("")
+
+
+                var i=0;
+                setInterval(function(){ 
+                    i++
+                    document.write(arr[i])
+                    if(i>=arr.length){
+                        window.close()
+                    }
+    
+                },300)
+            }
+
+
+            wee()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            img{
+                width:200px;
+                height: 200px;
+            }
+    </style>
+
+    </head>
+    <body>
+
+        <form action="index2.html">
+
+            <input type="text" name="userName"/>
+            <input type="password" name="userpass"/>
+            <input type="submit" value="login" /> 
+         </form> 
+
+         
+         <button onclick="windoe()">click here 2</button>
+
+         <br> <br> <br> <br> <br>
+         <br> <br> <br> <br> <br>
+
+         <img src="1.jpg" class="mg" onmouseover="opa(this)"  onmouseout="stopopa(this)">
+         <img src="2.jpg" class="mg"onmouseover="opa(this)" onmouseout="stopopa(this)">
+         <img src="3.jpg" class="mg" onmouseover="opa(this)" onmouseout="stopopa(this)">
+         <img src="4.jpg" class="mg"  onmouseover="opa(this)" onmouseout="stopopa(this)">
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+
+            function windoe(){
+
+                open("index3.html")
+               
+
+            }
+            ///////////////////////////////////////////
+
+            var maa;
+            function opa(element){
+
+                
+                var c =0.3;
+
+                maa=setInterval(function(){
+                    if(c >=0.3 && c <1){
+                        element.style.opacity = c;
+                        c+=0.1
+                        
+
+
+                    }
+                    else{
+                        c=0.3
+                        
+                    }
+
+
+
+
+                },500)
+
+               
+            }
+            function stopopa(element){
+                clearInterval(maa)
+                element.style.opacity = 1;
+
+
+
+            }
+           
+          
+          
+           
+            
+
+
+
+        </script>
+
+    </body>
+</html>

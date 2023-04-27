@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lab3</title>
+       
+
+
+    </head>
+    <body>
+        
+        <button onclick="sum()"> enter here to sum</button>
+        <button onclick="alert(less100())"> less1000! </button>
+        <button onclick="change()"> click here 3 </button>
+
+
+
+        <script>
+
+            for(var x=1 ; x <6 ;x++ ){
+                for(var star=1 ; star <=x ; star++){
+                    document.write("*");
+                   
+
+                }
+                document.write("<br>");
+
+            }
+
+
+            //33333333333
+
+            function change() {
+                var sss=parseInt(prompt("please enter text"));
+                alert(typeof sss);
+                alert(sss);
+                
+            }
+            //2222222222222
+
+            function less100(){
+                var n1=parseInt(prompt("please enter first number"));
+                var n2=parseInt(prompt("please enter second number"));
+                if(n1+n2<100){
+                    return true;
+
+                }
+                else{
+                    return false;
+                }
+
+            }
+
+            //111111111111111111
+            function sum(){
+                
+                var n1=parseInt(prompt("please enter first number"));
+                var n2=parseInt(prompt("please enter second number"));
+                document.write(n1+n2);
+
+            }
+            
+
+        </script>
+
+    </body>
+</html>
